@@ -1,0 +1,21 @@
+html body {
+    background-color:rgb(125,125,125);
+  }
+
+.row .col {
+    background-color:rgb(125,125,125);
+   
+}
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+  
+
+.logo{ 
+    height:100px;
+    width:auto;
+} 
