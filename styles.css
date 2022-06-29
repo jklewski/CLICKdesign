@@ -14,10 +14,20 @@ p {
     
 }
 
-  .card-img-top {
+ .card-img-top {
     width: 100%;
     height: auto;
-    object-fit: cover;
+
+}
+
+.card-text {
+  color:black;
+}
+
+.card-deck {
+  width:100vw;
+  padding:10px;
+  display:flex
 }
 
 .logo{ 
@@ -65,7 +75,15 @@ p {
   margin-top:35px;
 }
 
+#messages {
+  background:#303030;
+  width: 800px;
+  margin:auto;
+  margin-top:35px;
+}
+
 .tab-pane {
+  margin-top:20px;
   background-color:#303030; 
   height:100%;
 
@@ -73,4 +91,14 @@ p {
 
 .carousel-video-inner {
   text-align: center;
+}
+
+
+
+.carousel-control-prev {
+  margin-left: -100px;
+}
+
+.carousel-control-next {
+  margin-right: -100px;
 }

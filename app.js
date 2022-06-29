@@ -1,62 +1,47 @@
-$(function() {
-    $('#myTab li:nth-child(3) a').click("slide.bs.carousel", function(e) {
-      var prev = $(this)
-        .find(".active")
-        .index();
-      var video = $("#video-player")[0];
-      createVideo(video);
-    });
-  });
+// index.js
+const videos = [];
+const tag = document.createElement("script");
+const firstScriptTag = document.getElementsByTagName("script")[0];
 
-$(function() {
-    $(".carousel").on("slide.bs.carousel", function(e) {
-      var prev = $(this)
-        .find(".active")
-        .index();
-      var next = $(e.relatedTarget).index();
-      var video = $("#video-player")[0];
-      var videoSlide = $("#video-player")
-        .closest(".carousel-item")
-        .index();
-      if (next === videoSlide) {
-        if (video.tagName == "IFRAME") {
-          player.playVideo();
-        } else {
-          createVideo(video);
-        }
-      } else {
-        if (typeof player !== "undefined") {
-          player.pauseVideo();
-        }
-      }
-    });
-  });
+tag.src = "https://www.youtube.com/iframe_api";
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-
-
-  function createVideo(video) {
-    var youtubeScriptId = "youtube-api";
-    var youtubeScript = document.getElementById(youtubeScriptId);
-    var videoId = video.getAttribute("data-video-id");
-  
-    if (youtubeScript === null) {
-      var tag = document.createElement("script");
-      var firstScript = document.getElementsByTagName("script")[0];
-  
-      tag.src = "https://www.youtube.com/iframe_api";
-      tag.id = youtubeScriptId;
-      firstScript.parentNode.insertBefore(tag, firstScript);
-    }
-  
-    window.onYouTubeIframeAPIReady = function() {
-      window.player = new window.YT.Player(video, {
-        videoId: videoId,
-        playerVars: {
-          autoplay: 0,
-          modestbranding: 1,
-          rel: 0
-        }
+// YouTube wants this function, don't rename it
+function onYouTubeIframeAPIReady() {
+  const slides = Array.from(document.querySelectorAll(".carousel-item"));
+  slides.forEach((slide, index) => {
+    // does this slide have a video?
+    const video = slide.querySelector(".video-player");
+    if (video && video.dataset) {
+      const player = createPlayer({
+        id: video.id,
+        videoId: video.dataset.videoId,
       });
-    };
-  }
-  
+      videos.push({ player, index });
+    }
+  });
+}
+
+function createPlayer(playerInfo) {
+  return new YT.Player(playerInfo.id, {
+    videoId: playerInfo.videoId,
+    playerVars: {
+      showinfo: 0,
+    },
+  });
+}
+
+function theBigPause() {
+  videos.map((video) => video.player.pauseVideo());
+}
+
+$(function () {
+  $(".carousel").on("slide.bs.carousel", function (e) {
+    theBigPause();
+    const next = $(e.relatedTarget).index();
+    const video = videos.filter((v) => v.index === next)[0];
+    if (video) {
+      video.player.playVideo();
+    }
+  });
+});
