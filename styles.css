@@ -1,9 +1,16 @@
 html body {
-    background-color:rgb(125,125,125);
+    background-color:#303030;
   }
 
+
+
+p {
+  color:white
+}
+
+
 .row .col {
-    background-color:rgb(125,125,125);
+    background-color:#303030
     
 }
 
@@ -34,4 +41,36 @@ html body {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+
+.mainContainer {
+  background-color:black;
+  color:black;
+}
+
+.nav-tabs {
+  background-color:black
+}
+
+#home {
+  color:#303030;
+  background:#303030;
+}
+
+#home {
+  background:#303030;
+  width: 800px;
+  margin:auto;
+  margin-top:35px;
+}
+
+.tab-pane {
+  background-color:#303030; 
+  height:100%;
+
+}
+
+.carousel-video-inner {
+  text-align: center;
 }
