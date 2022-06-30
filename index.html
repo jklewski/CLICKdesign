@@ -16,14 +16,18 @@
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 
-    <title>ClickDesig</title>
-    <script>
-        $(document).ready(function () {
-            $('#myTab li:nth-child(3) a').click(function () {
-                console.log('a')
-            })
-        })
-    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <title>ClickDesign</title>
 
 </head>
 
@@ -33,6 +37,8 @@
         <h1> CLICK<i>design</i> resources</h1>
         <br>
     </div>
+
+    <img src="./images/Icon.svg" class="logo">
 
     <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
         <li class="nav-item">
@@ -55,6 +61,7 @@
 
     <div class="tab-content">
         <div class="tab-pane fade in active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div id="projectText">
             <h2 style="color:white">About</h2>
             <p>The CLICKdesign project (2019-2022) targeted performance based specification protocols to predict
                 long-term performance of wood products subjected to
@@ -75,10 +82,30 @@
 
 
             <h2 style="color:white"> Partners </h2>
+
+            <h2 style="color:white"> Funding </h2>
+            <p>Project CLICK<i>design</i> is supported under the umbrella of <a href="https://www.era-learn.eu/network-information/networks/forestvalue/forestvalue-2nd-cofund-call/click-design-2013-delivering-fingertip-knowledge-to-enable-service-life-performance-specification-of-wood">ERA-NET</a> 
+                Cofund <a href="https://forestvalue.org/">ForestValue</a> by the Ministry of Education, Science and Sport (MIZS) – Slovenia; The Ministry of the Environment (YM) – Finland; The Forestry Commissioners (FC) – UK; Research Council of Norway (RCN) -Norway; The French Environment & Energy Management Agency (ADEME) and The French National Research Agency (ANR) – France; The Swedish Research Council for Environment, Agricultural Sciences and Spatial Planning (FORMAS), Swedish Energy Agency (SWEA), Swedish Governmental Agency for Innovation Systems (Vinnova) – Sweden; Federal Ministry of Food and Agriculture (BMEL) and Agency for Renewable Resources (FNR) – Germany. ForestValue has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N° 773324. </p>
+            </div>
+            
+            <div class="footer" style="background-color:black; border-top:solid 2px white;">
+                <p style="color:white;font-size:10px">
+                    Disclaimer: All the information provided
+                    on this website is provided on an “as is” and “as available” basis and you agree that you use such
+                    information entirely at your own risk.
+                    The partners involved in the development gives no warranty and accepts no responsibility or
+                    liability for the accuracy of the information and materials contained in this website.
+                    Under no circumstances will the partners involved in the development be held responsible or liable
+                    in any way for any claims, damages, losses, expenses, costs or liabilities whatsoever
+                    (including, without limitation, any direct or indirect damages for loss of profits, business
+                    interruption or loss of information) resulting or arising directly or indirectly from your use of or
+                    inability to use this website or any websites linked to it.</p>
+            </div>
+
         </div>
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-            <div class="card-deck">
+            <div class="card-deck" style="max-width: 1000px; margin:auto">
                 <div class="card">
                     <img class="card-img-top" src="./images/tradack_AG.png" alt="Card image cap">
                     <div class="card-body">
@@ -175,27 +202,26 @@
         <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
 
             <div id="docDiv">
-
                 <object class="svgimg" type="image/svg+xml" data="./images/Graph_1.svg" id="alphasvg"></object>
-                <object class="svgimg" type="image/svg+xml" data="./images/Graph_2.svg" id="alphasvg2" style="display:none"></object>
-                <object class="svgimg" type="image/svg+xml" data="./images/Graph_3.svg" id="alphasvg3" style="display:none"></object>
-                <object class="svgimg" type="image/svg+xml" data="./images/Graph_4.svg" id="alphasvg4" style="display:none"></object>
-            
+                <object class="svgimg" type="image/svg+xml" data="./images/Graph_2.svg" id="alphasvg2"
+                    style="display:none"></object>
+                <object class="svgimg" type="image/svg+xml" data="./images/Graph_3.svg" id="alphasvg3"
+                    style="display:none"></object>
+                <object class="svgimg" type="image/svg+xml" data="./images/Graph_4.svg" id="alphasvg4"
+                    style="display:none"></object>
+
                 <div class="btn-group" role="group" aria-label="Basic example" id="modelType">
                     <button type="button" class="btn btn-secondary" id="Decay">Decay</button>
                     <button type="button" class="btn btn-secondary" id="Aesthetics">Aesthetics</button>
                     <button type="button" class="btn btn-secondary" id="Termites">Termites</button>
                     <button type="button" class="btn btn-secondary" id="Integrity">Integrity</button>
+                   
                 </div>
-            <object data="Documentation.html" id="page">
+                <object data="Documentation.html" id="page"></object>
             </div>
 
         </div>
-
     </div>
-
-
-
 
     <script>
         $(function () {
@@ -203,50 +229,9 @@
         })
 
     </script>
+
     <script src="app.js"></script>
     <script src="documentation.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="container-fluid mt-5 footer" style="background-color:black; border-top:solid 2px white">
-        <div class="row" style="background-color:black">
-                <p class="vertical-center" style="color:white;font-size:10px">Disclaimer: All the information provided
-                    on this website is provided on an “as is” and “as available” basis and you agree that you use such
-                    information entirely at your own risk.
-                    The partners involved in the development gives no warranty and accepts no responsibility or
-                    liability for the accuracy of the information and materials contained in this website.
-                    Under no circumstances will the partners involved in the development be held responsible or liable
-                    in any way for any claims, damages, losses, expenses, costs or liabilities whatsoever
-                    (including, without limitation, any direct or indirect damages for loss of profits, business
-                    interruption or loss of information) resulting or arising directly or indirectly from your use of or
-                    inability to use this website or any websites linked to it.</p>
-
-        </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
 </body>
 <script>
     alert("This site and all subpages are under construction. Everything is experimental, but feel free to follow the progress!");

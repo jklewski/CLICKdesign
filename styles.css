@@ -3,15 +3,12 @@ html body {
   }
 
 
-
 p {
   color:white
 }
 
-
 .row .col {
     background-color:#303030
-    
 }
 
  .card-img-top {
@@ -30,27 +27,19 @@ p {
   display:flex
 }
 
+
+
 .logo{ 
-    height:50px;
+  position:absolute;
+    height:100px;
     width:auto;
-    margin-top:10px;
+    top:5px;
+    right:5px;
 } 
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: left;
-}
-
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  position:fixed;
+  bottom:0;
 }
 
 
@@ -70,9 +59,13 @@ p {
 
 #home {
   background:#303030;
+  margin-top:35px;
+}
+
+#projectText {
+  background:#303030;
   width: 800px;
   margin:auto;
-  margin-top:35px;
 }
 
 #messages {
@@ -85,7 +78,7 @@ p {
 .tab-pane {
   margin-top:20px;
   background-color:#303030; 
-  height:100%;
+
 
 }
 
