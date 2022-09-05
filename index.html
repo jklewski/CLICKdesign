@@ -226,6 +226,14 @@
         <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
 
             <div id="docDiv">
+                <div class="btn-group" role="group" aria-label="Basic example" id="modelType">
+                    <button type="button" class="btn btn-secondary" id="Decay">Decay</button>
+                    <button type="button" class="btn btn-secondary" id="Aesthetics">Aesthetics</button>
+                    <button type="button" class="btn btn-secondary" id="Termites">Termites</button>
+                    <button type="button" class="btn btn-secondary" id="Integrity">Integrity</button>
+
+                </div>
+                <object data="\documentation\Documentation.html" id="page"></object>
                 <object class="svgimg" type="image/svg+xml" data="./images/Graph_1.svg" id="alphasvg"></object>
                 <object class="svgimg" type="image/svg+xml" data="./images/Graph_2.svg" id="alphasvg2"
                     style="display:none"></object>
@@ -234,14 +242,7 @@
                 <object class="svgimg" type="image/svg+xml" data="./images/Graph_4.svg" id="alphasvg4"
                     style="display:none"></object>
 
-                <div class="btn-group" role="group" aria-label="Basic example" id="modelType">
-                    <button type="button" class="btn btn-secondary" id="Decay">Decay</button>
-                    <button type="button" class="btn btn-secondary" id="Aesthetics">Aesthetics</button>
-                    <button type="button" class="btn btn-secondary" id="Termites">Termites</button>
-                    <button type="button" class="btn btn-secondary" id="Integrity">Integrity</button>
 
-                </div>
-                <object data="Documentation.html" id="page"></object>
             </div>
 
         </div>
@@ -251,15 +252,11 @@
         $(function () {
             $('#myTab li:first-child a').tab('show')
         })
-
     </script>
 
     <script src="app.js"></script>
     <script src="documentation.js"></script>
 </body>
-<script>
-    alert("This site and all subpages are under construction. Everything is experimental, but feel free to follow the progress!");
-</script>
 
 
 </html>
