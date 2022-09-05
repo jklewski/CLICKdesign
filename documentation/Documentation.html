@@ -8,9 +8,7 @@
 <body style="background:white">
     
 <h1 id="decay">Decay</h1>
-<p><img src="./image1.png"
-style="width:6.3in;height:3.03681in" /></p>
-<p>Figure 1</p>
+
 <h2 id="id0a">Weather</h2>
 <p>Each item is an array of size 365x551 representing the hourly weather
 variables from 551 different sites over one standard year in Europe. The
@@ -90,11 +88,11 @@ role="doc-noteref"><sup>6</sup></a>.</p>
 <p>For each location, driving rain on vertical surfaces was calculated
 for wall directions between 0 and 359 degrees, with an interval of 1
 degree. The maximum cumulative driving rain for any orientation was then
-divided by the to get the exposure to rain relative to the total rain
-passing through a horizontal surface.</p>
+divided by the total precipitaton passing through a horizontal surface to 
+obtain the relative exposure.</p>
 <p><img src="./image4.png"
-style="width:2.72917in;height:1.53629in" /></p>
-<p>Figure 3</p>
+style="width:5in;height:auto" /></p>
+<p>Figure 3. A wall with no overhang.</p>
 <p>Horizontal surfaces which are protected by roof structures can be
 considered sheltered when the wind direction is favourable. As an
 example, consider that the deck illustrated in Figure x is facing south.
@@ -105,22 +103,22 @@ in this point relative to the total rain passing through a horizontal
 surface was calculated, again considering the most adverse
 orientation.</p>
 <p><img src="./image5.png"
-style="width:2.72917in;height:1.53629in" /></p>
-<p>Figure 4</p>
+style="width:5in;height:auto" /></p>
+<p>Figure 4. Exposure on a horizontal surface with roof.</p>
 <p>Each output item consists of an array of size 551x1 with relative
 exposure to driving rain on horizontal surfaces with roof and vertical
 surfaces, respectively.</p>
 <h2 id="id7a">Material properties</h2>
 <p>Material performance indicators were obtained from a mix of
 laboratory and field trials<a href="#fn7" class="footnote-ref"
-id="fnref7" role="doc-noteref"><sup>7</sup></a><em>. Material properties
+id="fnref7" role="doc-noteref"><sup>7</sup></a>. Material properties
 include both a variety of relative moisture dynamics (e.g. long term
-absorption) and relative natural resistance to fungal decay.</em></p>
+absorption) and relative natural resistance to fungal decay.</p>
 <h2 id="id8a">Resistance model</h2>
-<p><em>A resistance model</em><a href="#fn8" class="footnote-ref"
-id="fnref8" role="doc-noteref"><sup>8</sup></a> <em>was used to derive
+<p>A resistance model<a href="#fn8" class="footnote-ref"
+id="fnref8" role="doc-noteref"><sup>8</sup></a> was used to derive
 in-ground and above-ground relative resistance from the material
-performance indicators.</em></p>
+performance indicators.</p>
 <h2 id="id6a">Soil conditions (SMAP)</h2>
 <p>Data from the SMAP database were used to derive surface water holding
 capacity, soil moisture content and surface temperature. SMAP provides
@@ -143,9 +141,7 @@ role="doc-noteref"><sup>10</sup></a></p>
 <h2 id="id4a">Module input</h2>
 <h1 id="section"></h1>
 <h1 id="termites">Termites</h1>
-<h2 id="section-1"><img src="./image6.png"
-style="width:6.3in;height:3.5in" /></h2>
-<p>Figure 5</p>
+
 <h2 id="id0c">Weather</h2>
 <p>Three different climates, including contemporary and two future
 climate scenarios, were used to a model the regional risk of termites.
@@ -176,9 +172,6 @@ distribution</h3>
 distribution</h3>
 <h3 id="id9c">Database</h3>
 <h1 id="aesthetics">Aesthetics </h1>
-<p><img src="./image8.png"
-style="width:6.3in;height:3.375in" /></p>
-<p>Figure 6.</p>
 <p>Figure 1 shows the concept used to simulate appearance changes of
 wood caused by environmental effects. The kinetic and/or intensity of
 such changes depends on structure and architectural design (3D model),
@@ -208,8 +201,7 @@ materials are often visualized by projecting an image of a real material
 onto the surface of the object. To project a flat image to an object
 consisting of several surfaces facing in different directions (normal),
 then the object needs to be unwrapped, or unfolded, onto a 2D plane.
-This process is called <a
-href="https://docs.blender.org/manual/en/latest/editors/uv/introduction.html">UV-mapping</a>.
+This process is called UV-mapping.
 Figure 1b shows the unwrapped surfaces of the basic 3D model. A flat
 texture can then be mapped to match the UV-map, whereafter the 3D-shape
 is reassembled.</p>
@@ -327,9 +319,6 @@ style="width:6.29236in;height:3in" /></p>
 <p>Figure 11. Conceptual illustration of the process for visualizing
 weathering from the module inputs.</p>
 <h1 id="integrity">Integrity </h1>
-<h2 id="section-3"><img src="./image15.png"
-style="width:6.29167in;height:3.37054in" /></h2>
-<p>Figure 12.</p>
 <h2 id="annual-exposure">Annual exposure</h2>
 <h2 id="component">Component</h2>
 <h2 id="decay-type">Decay type</h2>

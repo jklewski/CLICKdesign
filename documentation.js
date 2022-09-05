@@ -1,26 +1,33 @@
 
-btns = document.getElementById("modelType").children
-imgs = document.getElementsByClassName("svgimg")
-for (let i = 0; i < btns.length; i++) {
-        btns[i].onclick = function () {
-                var id = this.id
-                imgs[0].style.display = 'none'
-                imgs[1].style.display = 'none'
-                imgs[2].style.display = 'none'
-                imgs[3].style.display = 'none'
-                //imgs[2].style.display = 'none'
-                //imgs[3].style.display = 'none'
-                if (id == "Decay") {
-                        imgs[0].style.display = 'block'
-                } else if (id == "Aesthetics") {
-                        imgs[1].style.display = 'block'
-                } else if (id == "Termites") {
-                        imgs[2].style.display = 'block'
-                } else if (id == "Integrity") {
-                        imgs[3].style.display = 'block'
+pg = document.getElementById("page")
+pg.addEventListener("load", function () {
+        btns = document.getElementById("modelType").children
+        imgs = document.getElementsByClassName("svgimg")
+        for (let i = 0; i < btns.length; i++) {
+                btns[i].onclick = function () {
+                        var id = this.id
+                        imgs[0].style.display = 'none'
+                        imgs[1].style.display = 'none'
+                        imgs[2].style.display = 'none'
+                        imgs[3].style.display = 'none'
+                        var cont = pg.contentDocument
+                        if (id == "Decay") {
+                                imgs[0].style.display = 'block'
+                                cont.getElementById("decay").scrollIntoView();
+                        } else if (id == "Aesthetics") {
+                                imgs[1].style.display = 'block'
+                                cont.getElementById("aesthetics").scrollIntoView();
+                        } else if (id == "Termites") {
+                                imgs[2].style.display = 'block'
+                                cont.getElementById("termites").scrollIntoView();
+                        } else if (id == "Integrity") {
+                                imgs[3].style.display = 'block'
+                                cont.getElementById("integrity").scrollIntoView();
+                        }
                 }
         }
-}
+})
+
 
 var a = document.getElementById("alphasvg");
 a.addEventListener("load", function () {
@@ -52,7 +59,6 @@ a.addEventListener("load", function () {
                         delta[i].style.stroke = "rgb(255,255,255)"
                 }, false);
                 delta[i].addEventListener("click", function () {
-                        //alert('hello world!')
                         var pageId = document.getElementById("page");
                         var content = pageId.contentDocument
                         content.getElementById(delta[i].id).scrollIntoView();
